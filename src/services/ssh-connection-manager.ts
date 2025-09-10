@@ -207,14 +207,6 @@ export class SSHConnectionManager {
     command: string,
     name?: string
   ): { isAllowed: boolean; reason?: string } {
-    // Prevent command chaining
-    if (/[;&|]/.test(command)) {
-      return {
-        isAllowed: false,
-        reason: "Command chaining is not allowed.",
-      };
-    }
-
     const config = this.getConfig(name);
     // Check whitelist (if whitelist is configured, command must match one of the patterns to be allowed)
     if (config.commandWhitelist && config.commandWhitelist.length > 0) {
