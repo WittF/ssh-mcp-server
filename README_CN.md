@@ -36,6 +36,8 @@ NPM: [https://www.npmjs.com/package/@fangjunjie/ssh-mcp-server](https://www.npmj
 
 ### 🔧 MCP 配置示例
 
+> **⚠️ 重要提示**: 在 MCP 配置文件中，每个命令行参数和其值必须是 `args` 数组中的独立元素。不要用空格将它们连接在一起。例如，使用 `"--host", "192.168.1.1"` 而不是 `"--host 192.168.1.1"`。
+
 #### ⚙️ 命令行选项
 
 ```text
@@ -61,10 +63,10 @@ NPM: [https://www.npmjs.com/package/@fangjunjie/ssh-mcp-server](https://www.npmj
       "args": [
         "-y",
         "@fangjunjie/ssh-mcp-server",
-        "--host 192.168.1.1",
-        "--port 22",
-        "--username root",
-        "--password pwd123456"
+        "--host", "192.168.1.1",
+        "--port", "22",
+        "--username", "root",
+        "--password", "pwd123456"
       ]
     }
   }
@@ -81,10 +83,10 @@ NPM: [https://www.npmjs.com/package/@fangjunjie/ssh-mcp-server](https://www.npmj
       "args": [
         "-y",
         "@fangjunjie/ssh-mcp-server",
-        "--host 192.168.1.1",
-        "--port 22",
-        "--username root",
-        "--privateKey ~/.ssh/id_rsa"
+        "--host", "192.168.1.1",
+        "--port", "22",
+        "--username", "root",
+        "--privateKey", "~/.ssh/id_rsa"
       ]
     }
   }
@@ -101,11 +103,11 @@ NPM: [https://www.npmjs.com/package/@fangjunjie/ssh-mcp-server](https://www.npmj
       "args": [
         "-y",
         "@fangjunjie/ssh-mcp-server",
-        "--host 192.168.1.1",
-        "--port 22",
-        "--username root",
-        "--privateKey ~/.ssh/id_rsa",
-        "--passphrase pwd123456"
+        "--host", "192.168.1.1",
+        "--port", "22",
+        "--username", "root",
+        "--privateKey", "~/.ssh/id_rsa",
+        "--passphrase", "pwd123456"
       ]
     }
   }
@@ -122,11 +124,11 @@ NPM: [https://www.npmjs.com/package/@fangjunjie/ssh-mcp-server](https://www.npmj
       "args": [
         "-y",
         "@fangjunjie/ssh-mcp-server",
-        "--host 192.168.1.1",
-        "--port 22",
-        "--username root",
-        "--password pwd123456",
-        "--socksProxy socks://username:password@proxy-host:proxy-port"
+        "--host", "192.168.1.1",
+        "--port", "22",
+        "--username", "root",
+        "--password", "pwd123456",
+        "--socksProxy", "socks://username:password@proxy-host:proxy-port"
       ]
     }
   }
@@ -147,11 +149,11 @@ NPM: [https://www.npmjs.com/package/@fangjunjie/ssh-mcp-server](https://www.npmj
       "args": [
         "-y",
         "@fangjunjie/ssh-mcp-server",
-        "--host 192.168.1.1",
-        "--port 22",
-        "--username root",
-        "--password pwd123456",
-        "--whitelist ^ls( .*)?,^cat .*,^df.*"
+        "--host", "192.168.1.1",
+        "--port", "22",
+        "--username", "root",
+        "--password", "pwd123456",
+        "--whitelist", "^ls( .*)?,^cat .*,^df.*"
       ]
     }
   }
@@ -168,11 +170,11 @@ NPM: [https://www.npmjs.com/package/@fangjunjie/ssh-mcp-server](https://www.npmj
       "args": [
         "-y",
         "@fangjunjie/ssh-mcp-server",
-        "--host 192.168.1.1",
-        "--port 22",
-        "--username root",
-        "--password pwd123456",
-        "--blacklist ^rm .*,^shutdown.*,^reboot.*"
+        "--host", "192.168.1.1",
+        "--port", "22",
+        "--username", "root",
+        "--password", "pwd123456",
+        "--blacklist", "^rm .*,^shutdown.*,^reboot.*"
       ]
     }
   }

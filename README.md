@@ -36,6 +36,8 @@ NPM: [https://www.npmjs.com/package/@fangjunjie/ssh-mcp-server](https://www.npmj
 
 ### 🔧 MCP Configuration Examples
 
+> **⚠️ Important**: In MCP configuration files, each command line argument and its value must be separate elements in the `args` array. Do NOT combine them with spaces. For example, use `"--host", "192.168.1.1"` instead of `"--host 192.168.1.1"`.
+
 #### ⚙️ Command Line Options
 
 ```text
@@ -62,10 +64,10 @@ Options:
       "args": [
         "-y",
         "@fangjunjie/ssh-mcp-server",
-        "--host 192.168.1.1",
-        "--port 22",
-        "--username root",
-        "--password pwd123456"
+        "--host", "192.168.1.1",
+        "--port", "22",
+        "--username", "root",
+        "--password", "pwd123456"
       ]
     }
   }
@@ -82,10 +84,10 @@ Options:
       "args": [
         "-y",
         "@fangjunjie/ssh-mcp-server",
-        "--host 192.168.1.1",
-        "--port 22",
-        "--username root",
-        "--privateKey ~/.ssh/id_rsa"
+        "--host", "192.168.1.1",
+        "--port", "22",
+        "--username", "root",
+        "--privateKey", "~/.ssh/id_rsa"
       ]
     }
   }
@@ -102,11 +104,11 @@ Options:
       "args": [
         "-y",
         "@fangjunjie/ssh-mcp-server",
-        "--host 192.168.1.1",
-        "--port 22",
-        "--username root",
-        "--privateKey ~/.ssh/id_rsa",
-        "--passphrase pwd123456"
+        "--host", "192.168.1.1",
+        "--port", "22",
+        "--username", "root",
+        "--privateKey", "~/.ssh/id_rsa",
+        "--passphrase", "pwd123456"
       ]
     }
   }
@@ -123,11 +125,11 @@ Options:
       "args": [
         "-y",
         "@fangjunjie/ssh-mcp-server",
-        "--host 192.168.1.1",
-        "--port 22",
-        "--username root",
-        "--password pwd123456",
-        "--socksProxy socks://username:password@proxy-host:proxy-port"
+        "--host", "192.168.1.1",
+        "--port", "22",
+        "--username", "root",
+        "--password", "pwd123456",
+        "--socksProxy", "socks://username:password@proxy-host:proxy-port"
       ]
     }
   }
@@ -149,11 +151,11 @@ Example: Using Command Whitelist
       "args": [
         "-y",
         "@fangjunjie/ssh-mcp-server",
-        "--host 192.168.1.1",
-        "--port 22",
-        "--username root",
-        "--password pwd123456",
-        "--whitelist ^ls( .*)?,^cat .*,^df.*"
+        "--host", "192.168.1.1",
+        "--port", "22",
+        "--username", "root",
+        "--password", "pwd123456",
+        "--whitelist", "^ls( .*)?,^cat .*,^df.*"
       ]
     }
   }
@@ -170,11 +172,11 @@ Example: Using Command Blacklist
       "args": [
         "-y",
         "@fangjunjie/ssh-mcp-server",
-        "--host 192.168.1.1",
-        "--port 22",
-        "--username root",
-        "--password pwd123456",
-        "--blacklist ^rm .*,^shutdown.*,^reboot.*"
+        "--host", "192.168.1.1",
+        "--port", "22",
+        "--username", "root",
+        "--password", "pwd123456",
+        "--blacklist", "^rm .*,^shutdown.*,^reboot.*"
       ]
     }
   }
