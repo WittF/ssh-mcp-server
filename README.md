@@ -59,7 +59,7 @@ Options:
 ```json
 {
   "mcpServers": {
-    "ssh-mpc-server": {
+    "ssh-mcp-server": {
       "command": "npx",
       "args": [
         "-y",
@@ -79,7 +79,7 @@ Options:
 ```json
 {
   "mcpServers": {
-    "ssh-mpc-server": {
+    "ssh-mcp-server": {
       "command": "npx",
       "args": [
         "-y",
@@ -99,7 +99,7 @@ Options:
 ```json
 {
   "mcpServers": {
-    "ssh-mpc-server": {
+    "ssh-mcp-server": {
       "command": "npx",
       "args": [
         "-y",
@@ -120,7 +120,7 @@ Options:
 ```json
 {
   "mcpServers": {
-    "ssh-mpc-server": {
+    "ssh-mcp-server": {
       "command": "npx",
       "args": [
         "-y",
@@ -146,7 +146,7 @@ Example: Using Command Whitelist
 ```json
 {
   "mcpServers": {
-    "ssh-mpc-server": {
+    "ssh-mcp-server": {
       "command": "npx",
       "args": [
         "-y",
@@ -167,7 +167,7 @@ Example: Using Command Blacklist
 ```json
 {
   "mcpServers": {
-    "ssh-mpc-server": {
+    "ssh-mcp-server": {
       "command": "npx",
       "args": [
         "-y",
